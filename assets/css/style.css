@@ -29,6 +29,7 @@ input[type=text]:focus,
 .main-nav .logo{
     line-height: normal;
     margin: 0;
+    transition: all .5s;
 }
 .main-nav .logo-text{
 	font-family: Roboto Slab;
@@ -54,6 +55,20 @@ input[type=text]:focus,
 	font-weight:bold;
 	color: #adadad;
 	font-size: 14px;
+    transition: all .5s;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    top: -70px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transform: translateY(70px);
+    transition: transform 500ms ease-in-out;
+    background: #fff;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.06);
 }
 
 /*Home Banner Css*/
@@ -72,19 +87,19 @@ input[type=text]:focus,
     transition: all .5s;
 }
 .banner-item-1{
-	background: url(../img/hero-bg-1.jpg);
+	background: linear-gradient(rgb(136 135 135 / 65%), rgb(41 36 38 / 54%)),url(../img/hero-bg-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
 }
 .banner-item-2{
-	background: url(../img/hero-bg-2.jpg);
+	background: linear-gradient(rgb(136 135 135 / 65%), rgb(41 36 38 / 54%)),url(../img/hero-bg-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .banner-item-3{
-	background: url(../img/hero-bg-3.jpeg);
+	background: linear-gradient(rgb(136 135 135 / 65%), rgb(41 36 38 / 54%)),url(../img/hero-bg-3.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -93,6 +108,7 @@ input[type=text]:focus,
 	width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    color: #ddd;
 }
 .home-banner-title{
 	font-size: 60px;
@@ -114,7 +130,7 @@ input[type=text]:focus,
 .home-banner-btn{
 	text-align: center;
     font-size: 18px;
-    color: #000000;
+    color: #ddd;
     display: block;
     margin-top: 20px;
     font-style: italic;
@@ -1258,11 +1274,13 @@ label:after {
     content: "*";
     color: red;
     font-size: 20px;
-    font-weight: bold;
     top: -2px;
-    right: -10px;
+    left: 65px;
 }
-input[type="text"],input[type="password"]{
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ece6e6;
