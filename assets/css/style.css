@@ -996,11 +996,12 @@ h1.breadcrumb-title{
 }
 .search .search-form input[type=text]{
 	position: relative;
-	border: 0;
+    bottom: 8px;
+    border: 0;
     background: transparent;
     border-radius: 0;
     height: 33px;
-    width: 300px;
+    width: 70%;
     border-bottom: 1px solid #99999f;
 }
 .search-filter-product{
